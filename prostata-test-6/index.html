@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfQ0NzUzJnNXJiNUR3N1NZaic7CiAgICBpZiAoIXdpbmRvdy5fQ0NzUzJnNXJiNUR3N1NZaikgewogICAgICAgIHdpbmRvdy5fQ0NzUzJnNXJiNUR3N1NZaiA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9jYXJ0aWZhdG8ubWwvYmJCQnROd0QnLAogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL2NhcnRpZmF0by5tbC8yNWJkZTZiL3Bvc3RiYWNrJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgXzduM1pWWTRGWEZnejNMWmMgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF83bjNaVlk0RlhGZ3ozTFpjICE9PSAndW5kZWZpbmVkJyAmJiBfN24zWlZZNEZYRmd6M0xaYyAhPT0gbnVsbCkgewogICAgICAgIHZhciBfU2trNEo3N2t0Z2JmWDZYcCA9IEpTT04ucGFyc2UoXzduM1pWWTRGWEZnejNMWmMpOwogICAgICAgIHZhciBfTllXNjZRa2d0N2R5ZHZmMiA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9Ta2s0Sjc3a3RnYmZYNlhwLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX0NDc1MyZzVyYjVEdzdTWWoudHRsIDwgX05ZVzY2UWtndDdkeWR2ZjIpIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF9XMkgySDFyUjFYbjMzSmhxID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX3FaSFhTNVhzWWRnYnoxMWggPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfMkNtTVRQa0daeGdwUll5TiA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgXzJDbU1UUGtHWnhncFJZeU4gKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgXzJDbU1UUGtHWnhncFJZeU4gKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfMkNtTVRQa0daeGdwUll5TiArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfMkNtTVRQa0daeGdwUll5TiArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgXzJDbU1UUGtHWnhncFJZeU4gKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICBpZiAodHlwZW9mIF9XMkgySDFyUjFYbjMzSmhxICE9PSAndW5kZWZpbmVkJyAmJiBfVzJIMkgxclIxWG4zM0pocSAmJiB3aW5kb3cuX0NDc1MyZzVyYjVEdzdTWWoudW5pcXVlKSB7CiAgICAgICAgXzJDbU1UUGtHWnhncFJZeU4gKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfVzJIMkgxclIxWG4zM0pocSk7CiAgICB9CiAgICBpZiAodHlwZW9mIF9xWkhYUzVYc1lkZ2J6MTFoICE9PSAndW5kZWZpbmVkJyAmJiBfcVpIWFM1WHNZZGdiejExaCAmJiB3aW5kb3cuX0NDc1MyZzVyYjVEdzdTWWoudW5pcXVlKSB7CiAgICAgICAgXzJDbU1UUGtHWnhncFJZeU4gKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9xWkhYUzVYc1lkZ2J6MTFoKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll9DQ3NTMmc1cmI1RHc3U1lqLlJfUEFUSCArIF8yQ21NVFBrR1p4Z3BSWXlOOwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Local Applicator</title>
+
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="icon" href="../wp-content/uploads/2019/02/cropped-android-chrome-512x512-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../wp-content/uploads/2019/02/cropped-android-chrome-512x512-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="../wp-content/uploads/2019/02/cropped-android-chrome-512x512-180x180.png" />
+    
+    <!-- JQUERY -->
+    <script
+  src="../../code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        
+        <script src="../wp-content/themes/localapplicatorlp-child/tester/assets/script-3.js"></script>
+    
+    <!-- CUSTOM CSS -->
+
+            <link rel="stylesheet" type="text/css" href="../wp-content/themes/localapplicatorlp-child/tester/assets/style.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132900342-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-132900342-1');
+    </script>
+</head>
+<body class="prostata-test-6">
+    <div id="wrapper">
+
+    <div class="mainContainer ipss-test" data-hubspot="920b971b-b7c5-4482-bcf2-aac2df6a0a32" id="maincont">
+<div class="topBar"><img id="logo" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/logo.svg" width="200">
+<img id="mig" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/mig.svg" width="200">
+<div class="contact"><span class="number">0721-46139750</span>
+<span class="desc">Kostenloses Fachgespräch</span>
+<span class="desc">Mo. &#8211; Fr.: 8:00 Uhr &#8211; 18:00 Uhr</span></div>
+</div>
+<div class="content">
+<div id="devicewrap">
+<div id="runningDevice"><img id="animationCover" style="z-index: 300;" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/animationCover2.png" width="450">
+<img id="animationInfra" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/animationInfra.png" width="214">
+<img id="animationLight" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/animationLight.png" width="172">
+<img id="animationBottom" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/animationBottom.png" width="172">
+<img id="animationMagnet" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/animationMagnet.png" width="179"></div>
+</div>
+<span class="caption main"><b>
+Beantworten Sie die folgenden Fragen und erfahren
+Sie sofort, ob der Local Applicator bei Ihrem
+Prostata Problem helfen kann.</b>
+</span>
+<div id="hubspotForm">
+<div class="formHeader"><img class="arrow" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/arrow-grey1.svg">
+<span class="formTitle">IPPS Prostata Test:</span>
+<span class="formSubtitle">Noch <span id="dynamicplaces">&nbsp;&nbsp;</span> Plätze frei</span></div>
+<div id="framediv">
+<div id="frame" class="answers">
+
+                    <!-- QUESTION 1 -->
+<div id="step1" class="steps">
+<div class="formQuestion"><span class="question">Wie oft haben Sie das Gefühl, dass Ihre Blase nach dem Wasserlassen nicht ganz entleert ist?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check1 nicht_ganz_entleert" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check1 nicht_ganz_entleert" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check1 nicht_ganz_entleert" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check1 nicht_ganz_entleert" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check1 nicht_ganz_entleert" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check1 nicht_ganz_entleert" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 2 -->
+<div id="step2" class="steps">
+<div class="formQuestion"><span class="question">Wie oft mussten Sie innerhalb von 2 Stunden ein zweites Mal Wasserlassen?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check2 n2_stunden_zweites_mal" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check2 n2_stunden_zweites_mal" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check2 n2_stunden_zweites_mal" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check2 n2_stunden_zweites_mal" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check2 n2_stunden_zweites_mal" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check2 n2_stunden_zweites_mal" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 3 -->
+<div id="step3" class="steps">
+<div class="formQuestion"><span class="question">Wie oft mussten Sie beim Wasserlassen mehrmals aufhören und wieder neu beginnen (Harnstottern)?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check3 harnstottern" name="answr" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check3 harnstottern" name="answr" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check3 harnstottern" name="answr" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check3 harnstottern" name="answr" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check3 harnstottern" name="answr" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check3 harnstottern" name="answr" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 4 -->
+<div id="step4" class="steps">
+<div class="formQuestion"><span class="question">Wie oft hatten Sie Schwierigkeiten, das Wasserlassen hinauszuzögern?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check4 wasserlassen_hinauszoergern_schwierig" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check4 wasserlassen_hinauszoergern_schwierig" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check4 wasserlassen_hinauszoergern_schwierig" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check4 wasserlassen_hinauszoergern_schwierig" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check4 wasserlassen_hinauszoergern_schwierig" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check4 wasserlassen_hinauszoergern_schwierig" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 5 -->
+<div id="step5" class="steps">
+<div class="formQuestion"><span class="question">Wie oft hatten Sie einen schwachen Strahl beim Wasserlassen?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check5 schwacher_strahl" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check5 schwacher_strahl" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check5 schwacher_strahl" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check5 schwacher_strahl" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check5 schwacher_strahl" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check5 schwacher_strahl" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 6 -->
+<div id="step6" class="steps">
+<div class="formQuestion"><span class="question">Wie oft mussten sie pressen oder sich anstrengen, um mit dem Wasserlassen zu beginnen?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check6 pressen_beim_wasserlassen" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check6  pressen_beim_wasserlassen" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check6 pressen_beim_wasserlassen" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check6 pressen_beim_wasserlassen" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check6 pressen_beim_wasserlassen" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check6 pressen_beim_wasserlassen" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 7 -->
+<div id="step7" class="steps">
+<div class="formQuestion"><span class="question">Wie oft sind sie im Durchschnitt nachts aufgestanden, um Wasser zu lassen?</span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check7 nachts_aufstehen_wie_oft" type="checkbox" data-value="nie" value="0">
+<span class="checkmark">Nie</span>
+</label>
+<label class="container">
+<input class="check7 nachts_aufstehen_wie_oft" type="checkbox" data-value="selten" value="1">
+<span class="checkmark">Selten</span>
+</label>
+<label class="container">
+<input class="check7 nachts_aufstehen_wie_oft" type="checkbox" data-value="manchmal" value="2">
+<span class="checkmark">Manchmal</span>
+</label>
+<label class="container">
+<input class="check7 nachts_aufstehen_wie_oft" type="checkbox" data-value="haufig" value="3">
+<span class="checkmark">Häufig</span>
+</label>
+<label class="container">
+<input class="check7 nachts_aufstehen_wie_oft" type="checkbox" data-value="sehr_haufig" value="4">
+<span class="checkmark">Sehr häufig</span>
+</label>
+<label class="container">
+<input class="check7 nachts_aufstehen_wie_oft" type="checkbox" data-value="fast_immer" value="5">
+<span class="checkmark">Fast immer</span>
+</label>
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- QUESTION 8 -->
+<div id="step8" class="steps">
+<div class="formQuestion"><span class="question">Wie würden Sie sich fühlen, wenn sich Ihre aktuellen Symptome nicht mehr ändern oder sogar noch schlechter werden würden? </span></div>
+<!-- ANSWERS -->
+<label class="container">
+<input class="check1 was_wenn_weitere_verschlechterung" type="checkbox" value="das_wurde_mich_gar_nicht_stoeren">
+<span class="checkmark">Das würde mich gar nicht stören</span>
+</label>
+<label class="container">
+<input class="check1 was_wenn_weitere_verschlechterung" type="checkbox" value="das_wurde_mich_stoeren">
+<span class="checkmark">Das würde mich stören</span>
+</label>
+<label class="container">
+<input class="check1 was_wenn_weitere_verschlechterung" type="checkbox" value="das_ware_ein_problem_fuer_mich">
+<span class="checkmark">Das wäre ein Problem für mich</span>
+</label>
+<label class="container">
+<input class="check1 was_wenn_weitere_verschlechterung" type="checkbox" value="das_ware_ein_grosses_problem_fuer_mich">
+<span class="checkmark">Das wäre ein großes Problem für mich</span>
+</label>
+
+<!-- /ANSWERS -->
+<div class="errorcheck">Bitte eine Antwort auswählen</div>
+</div>
+<!-- STEP 9 -->
+<div id="step9" class="steps">
+<div class="formQuestion"><span class="question">Ihr Testergebnis wird ausgewertet</span></div>
+<div style="text-align: center; padding: 20px; float: left; width: 100%;">Bitte haben Sie einen Moment Geduld.</div>
+<div style="text-align: center; padding: 20px; float: left; width: 100%;"><img src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/Spinner-1s-200px.gif"></div>
+</div>
+<!-- STEP 10 -->
+<div id="step10" class="steps">
+<div class="formQuestion"><span class="question">Ihr Testergebnis ist ausgewertet!</span></div>
+<div class="formQuestion"><span class="question" style="margin-top: -10%;"> Wer soll das Testergebnis erhalten?</span></div>
+<label class="container containertext">
+<input id="firstname" type="text" placeholder="Vorname">
+</label>
+<label class="container containertext">
+<input id="lastname" type="text" placeholder="Nachname">
+</label>
+<label class="container containertext">
+<input id="phone" type="text" placeholder="Mobil- oder Festnetznummer"></label>
+<!--
+<div class="tooltip" style="left: 82%;top: -45px;"><i class="material-icons" style="color: rgba(99, 103, 100, 0.67);">info</i>
+                                                                        <span class="tooltiptext">Zusätzliche Informationen über Ihr Testergebnis werden telefonisch mit Ihnen besprochen.</span></div>
+-->
+<label class="container containertext">
+<input id="email" type="text" placeholder="Email Adresse"></label>
+<!--
+<div class="tooltip" style="left: 73%;top: 14px;"><i class="material-icons" style="color: rgba(99, 103, 100, 0.67);">info</i>
+                                                                        <span class="tooltiptext" style="height: 105px;">Wir senden Ihnen detailierte Informationen per E-Mail zu. Ihre Daten werden absolut vertraulich behandelt</span></div>
+-->
+<div class="text3" style="font-size: 13px; display: block; margin-left: 12%; width: 70%; margin-bottom: -50%; height: 40px; text-align: center;">Datenschutz ist uns genauso wichtig wie Ihnen. Hier finden Sie unsere <a href="../../www.localapplicator.com/pages/datenschutz.html" target="_blank" rel="noopener noreferrer">Datenschutzbestimmungen</a>.</div>
+<div class="errorcheck">Bitte füllen Sie alle Felder aus.</div>
+</div>
+<!-- STEP 11 -->
+<div id="step11" class="steps">&nbsp;</div>
+</div>
+</div>
+<button id="framecontroll" class="button" type="submit">WEITER &gt;&gt;</button>
+
+</div>
+</div>
+<div class="infoBar"><span class="caption">Ihre Vorteile bei der Testteilnahme:</span>&nbsp;
+
+&nbsp;
+<ul>
+ 	<li><i class="material-icons">check_box</i>Sie erhalten sofort online Ihr Testergebnis.</li>
+ 	<li><i class="material-icons">check_box</i>Passt Ihr Prostata Beschwerdebild&#8230;</li>
+ 	<li><i class="material-icons">check_box</i>&#8230;können Sie die Therapie 30 Tage bei sich zuhause kennenlernen.</li>
+ 	<li style="color: #3d92fb"><i class="material-icons">check_box</i><b>Was dürfen Sie von der Therapie erwarten?</b></li>
+ 	<li><i class="material-icons">check_box</i>Weniger Toilettengänge bei Tag und Nacht, keine Nebenwirkungen,</li>
+ 	<li><i class="material-icons">check_box</i>Erholsamerer Schlaf, eine verbesserte Durchblutung Ihrer Prostata.</li>
+</ul>
+<div class="beirat">
+<div>Fragen beantworten unsere Fachärzte:</div>
+<img src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/doctors.jpg">
+
+</div>
+</div>
+<div class="mainContainer second">
+<div class="infoBar"><span class="caption">Teilnahmebedingungen:</span>&nbsp;
+
+&nbsp;
+<ul>
+ 	<li><i class="material-icons">done</i>Sie sind mindestens 18 Jahre alt</li>
+ 	<li><i class="material-icons">done</i>Sie haben eine vergrößerte Prostata</li>
+ 	<li><i class="material-icons">done</i>Ihr Wohnsitz ist in Deutschland, Österreich oder in der Schweiz</li>
+</ul>
+<img style="float: right; margin-top: -152px;" src="../wp-content/themes/localapplicatorlp-child/tester/assets/img/patent.gif">
+
+</div>
+<div id="dankesatz">
+<div class="formQuestion"><span class="question green">Vielen Dank für Ihre Zeit.</span> <span class="subquestion">Wir haben Ihnen soeben eine E-Mail mit einem Testangebot und weiteren Informationen zum Local Applicator gesendet. Wir melden uns schnellstmöglich telefonisch bei Ihnen.</span></div>
+<span class="subquestion">Gratulation zu Ihrem ersten Schritt für mehr Lebensqualität bei Prostatabeschwerden! Sie möchten nicht auf unsere Kontaktaufnahme warten? Dann rufen Sie uns einfach jetzt an: </span>
+<span class="question"><span class="phonenumber">0721-46139750&nbsp;</span>Mo. &#8211; Fr.: 8:00 Uhr &#8211; 18:00 Uhr.</span>
+<span style="margin: 20px 0 34px 0; float: left; text-align: center;">Möchten Sie mehr zum Local Applicator bei Prostataproblemen erfahren? Dann besuchen Sie jetzt unsere Webseite:</span>
+<a id="dankebutton" class="button" href="../../www.localapplicator.com/pages/prostata.html" target="_blank" rel="noopener noreferrer">Jetzt Webseite besuchen &gt;</a>
+<div id="result1">
+<div>Die Auswertung Ihres Testergebnis nach dem wissenschaftlich validierten IPSS <em>(Internationaler Prostata Symptomen Score)</em> ergibt bei Ihnen folgendes Ergebnis:</div>
+<div style="font-weight: bold; color: #3d92fb;">Ihr IPSS Wert beträgt {number} = Dies ist ein Anzeichen für eine Prostataerkrankung im frühen Stadium. Laut dem IPSS ist dass das Stadium 1 von 3 möglichen Stadien.</div>
+<div>Sie haben wenig bis milde Symptome.</div>
+<div><b style="color: #3d92fb;">Empfehlung:&nbsp;</b>Die Tatsache, dass Sie an dem Test teilgenommen haben zeigt, dass Beschwerden vorliegen, die Sie als störend empfinden. Falls Sie Medikamente einnehmen, die zu einer Linderung Ihrer Beschwerden führen, machen Sie den Test bitte noch einmal und beziehen Sie Ihre Antworten auf die Zeit vor der Einnahme der Medikamente.</div>
+<div>Sie können den Local Applicator für eine verbesserte Mirkrozirkulation Ihrer Prostata jetzt 30 Tage zuhause anwenden. Wir haben Ihnen soeben eine E-Mail mit allen Informationen dazu gesendet.</div>
+<div>Sie möchten mehr über den Local Applicator erfahren? Dann klicken Sie bitte auf den orangen Button.</div>
+</div>
+<div id="result2">
+<div>Die Auswertung Ihres Testergebnis nach dem wissenschaftlich validierten IPSS <em>(Internationaler Prostata Symptomen Score)</em> ergibt bei Ihnen folgendes Ergebnis:</div>
+<div style="font-weight: bold; color: #3d92fb;">Ihr IPSS Wert beträgt {number} = Dies ist ein Anzeichen für eine Prostataerkrankung im mittleren Stadium. Laut dem IPSS-Test ist dass das Stadium 2 von 3 möglichen Stadien.</div>
+<div>Sie haben mittelgradige Symptome. Der Grund für Ihre Beschwerden ist eine Prostataerkrankung. Sie haben diesbezüglich sicher schon einen Arzt konsolidiert.</div>
+<div><b style="color: #3d92fb;">Empfehlung:&nbsp;</b>Die Anwendung des Local Applicators wäre in Ihrem Fall anzuraten. Sie könnten von den Vorteilen <em>(Linderung Ihrer&nbsp;&nbsp;Beschwerden ohne Nebenwirkungen)</em> profitieren. Ihrem Fall ist mit einem raschen Wirkungseintritt zu rechnen.&nbsp;</div>
+<div>Sie können den Local Applicator für eine verbesserte Mirkrozirkulation Ihrer Prostata jetzt 30 Tage zuhause anwenden. Wir haben Ihnen soeben eine E-Mail mit allen Informationen dazu gesendet.</div>
+<div>Sie möchten mehr über den Local Applicator erfahren? Dann klicken Sie bitte auf den orangen Button.</div>
+</div>
+<div id="result3">
+<div>Die Auswertung Ihres Testergebnis nach dem wissenschaftlich validierten IPSS <em>(Internationaler Prostata Symptomen Score)</em> ergibt bei Ihnen folgendes Ergebnis:</div>
+<div style="font-weight: bold; color: #3d92fb;">Ihr IPSS Wert beträgt {number} = Dies ist ein Anzeichen für eine Prostataerkrankung im fortgeschrittenen Stadium. Laut dem IPSS-Test ist dass das Stadium 3 von 3 möglichen Stadien.</div>
+<div>Sie leiden an schweren Symptomen und haben diesbezüglich sicher auch schon einen Urologen konsultiert.</div>
+<div><b style="color: #3d92fb;">Empfehlung:</b> Die Anwendung des Local Applicators ist in Ihrem Fall anzuraten. Sie könnten von den Vorteilen (<em>Linderung Ihrer Beschwerden ohne Nebenwirkungen)</em> profitieren. In Ihrem Fall ist mit einem raschen Wirkungseintritt zu rechnen.</div>
+<div>Sie können den Local Applicator für eine verbesserte Mirkrozirkulation Ihrer Prostata jetzt 30 Tage zuhause anwenden. Wir haben Ihnen soeben eine E-Mail mit allen Informationen dazu gesendet.</div>
+<div>Sie möchten mehr über den Local Applicator erfahren? Dann klicken Sie bitte auf den orangen Button.</div>
+</div>
+</div>
+</div>
+</div><div id="footer">
+    <a href="../../www.localapplicator.com/pages/impressum.html" target="_blank">Impressum</a>
+    <a href="../../www.localapplicator.com/pages/datenschutz.html" target="_blank">Datenschutz</a>
+</div>
+</div>
+</body>
+
+<!-- Mirrored from test.localapplicator.com/prostata-test-6/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 May 2020 23:19:00 GMT -->
+</html><style> .content {background-image: url('../wp-content/uploads/2019/04/Prostata-hoch-LA-Hand1.jpg') ; }</style>
